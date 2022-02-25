@@ -6,9 +6,9 @@ USESASL = no    #     yes or no to use SASL
 LDAPS = null      #     Address of domaincontroller
 CACERT = no     #     Full path and file to CAroot like: /usr/share/ca-certificates/root/myCA.cer
 ################ auth config  ####################
-ADADMIN = admin #         Set the name of domain admin of service user for authenticating the domain join
+ADADMIN = null #         Set the name of domain admin of service user for authenticating the domain join
 LOCALADMIN = no #     Name of the user for the local account # like :administrator #null sets administrator as default user
-SUDOERS = no    #     yes or no for adding group in sudoers #null for manual setup
+SUDOERS = null    #     yes or no for adding group in sudoers #null for manual setup
 SSHSECURE = no  #     yes or no for for Blocking anyone but aprooved users #null for manual setup
 DISSPROMT = null  #     yes or no for disable sudo promt in terminal
 ############### read encrypted passwd ############
