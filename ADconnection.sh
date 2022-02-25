@@ -164,14 +164,14 @@ else
     case $yn in
     [Yy]* )
 sudo echo "administrator ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
-sudo echo "%$myhost""sudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
+sudo echo "%ubuntusudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
 sudo echo "%DOMAIN\ admins ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_admins
 #sudo realm permit --groups "$myhost""sudoers"
 ;;
 
  [Nn]* )
 sudo echo "administrator ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
-sudo echo "%$myhost""sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
+sudo echo "%ubuntusudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
 sudo echo "%DOMAIN\ admins ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_admins
 #sudo realm permit --groups "$myhost""sudoers"
 ;;
