@@ -1,6 +1,5 @@
 #!/bin/bash
-##################################################################################################################################
-#                                           This script is written by Pierre Gode                                                #
+##################################################################################################################################                                                #
 #      This program is open source; you can redistribute it and/or modify it under the terms of the GNU General Public           #
 #                     This is an normal bash script and can be executed with sh EX: ( sudo sh ADconnection.sh )                  #
 # Generic user setup is: administrator, domain admins, groupnamesudores= groupname=hostname + sudoers on group name in AD groups #
@@ -164,14 +163,14 @@ else
     case $yn in
     [Yy]* )
 sudo echo "administrator ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
-sudo echo "%$myhost""sudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
+sudo echo "%ubuntusudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
 sudo echo "%DOMAIN\ admins ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/domain_admins
 #sudo realm permit --groups "$myhost""sudoers"
 ;;
 
  [Nn]* )
 sudo echo "administrator ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
-sudo echo "%$myhost""sudoers ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/sudoers
+sudo echo "%ubuntusudoers ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/sudoers
 sudo echo "%DOMAIN\ admins ALL=(ALL:ALL) ALL" | sudo tee -a /etc/sudoers.d/domain_admins
 #sudo realm permit --groups "$myhost""sudoers"
 ;;
